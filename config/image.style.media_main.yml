@@ -1,0 +1,15 @@
+uuid: 826434ea-5e33-4d1a-814d-99a9b0a3ffa7
+langcode: en
+status: true
+dependencies: {  }
+name: media_main
+label: 'Media main'
+effects:
+  16b9d56e-f247-46fe-86a2-d76483cea7fe:
+    uuid: 16b9d56e-f247-46fe-86a2-d76483cea7fe
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: false

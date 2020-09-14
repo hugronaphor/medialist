@@ -1,0 +1,41 @@
+uuid: a2b3dd17-b97b-4360-9205-7b3d59f08e13
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_statistics_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Statistics configuration'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - statistics_enable_access_log
+    - statistics_flush_accesslog_timer
+    - statistics_count_content_views
+  source_module: statistics
+process:
+  count_content_views:
+    -
+      plugin: get
+      source: statistics_count_content_views
+destination:
+  plugin: config
+  config_name: statistics.settings
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,0 +1,10 @@
+uuid: 72d01a1a-3341-4485-bdfd-3d49ab29a02e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.comments
+label: Comments
+targetEntityType: node
+cache: true

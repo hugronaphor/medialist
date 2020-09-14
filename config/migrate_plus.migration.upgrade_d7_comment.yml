@@ -1,0 +1,115 @@
+uuid: 4e12f228-8308-4219-a84c-3fd3308ce53f
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_comment
+class: Drupal\comment\Plugin\migrate\D7Comment
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: Comments
+source:
+  plugin: d7_comment
+  constants:
+    entity_type: node
+    comment_type: media
+process:
+  cid:
+    -
+      plugin: get
+      source: cid
+  pid:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: pid
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_comment
+  entity_id:
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_node_complete_article
+      source: nid
+    -
+      plugin: node_complete_node_lookup
+    -
+      plugin: skip_on_empty
+      method: row
+  entity_type:
+    -
+      plugin: get
+      source: constants/entity_type
+  comment_type:
+    -
+      plugin: get
+      source: constants/comment_type
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: en
+  field_name:
+    -
+      plugin: default_value
+      default_value: field_comments
+  subject:
+    -
+      plugin: get
+      source: subject
+  uid:
+    -
+      plugin: get
+      source: uid
+  name:
+    -
+      plugin: get
+      source: name
+  mail:
+    -
+      plugin: get
+      source: mail
+  homepage:
+    -
+      plugin: get
+      source: homepage
+  hostname:
+    -
+      plugin: get
+      source: hostname
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  status:
+    -
+      plugin: get
+      source: status
+  thread:
+    -
+      plugin: get
+      source: thread
+  field_comment:
+    -
+      plugin: get
+      source: comment_body
+destination:
+  plugin: 'entity:comment'
+migration_dependencies:
+  required:
+    - upgrade_d7_node_complete_article
+  optional:
+    - upgrade_d7_node_complete_article
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_comment
+    - upgrade_d7_comment_type
+    - upgrade_d7_node_complete_article
+    - upgrade_d7_node_complete_page

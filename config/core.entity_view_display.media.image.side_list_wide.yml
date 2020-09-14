@@ -1,0 +1,36 @@
+uuid: 3ad2130c-bf86-42e6-8b2a-bee593c653aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.side_list_wide
+    - field.field.media.image.field_media_image
+    - image.style.side_list_wide
+    - media.type.image
+  module:
+    - background_image_formatter
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.image.side_list_wide
+targetEntityType: media
+bundle: image
+mode: side_list_wide
+content:
+  thumbnail:
+    type: background_image_formatter
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: side_list_wide
+      background_image_output_type: inline
+      background_image_selector: 'bg-img id'
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_image: true
+  name: true
+  uid: true

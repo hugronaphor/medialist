@@ -1,0 +1,61 @@
+article.comment {
+  margin-top: 10px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+
+  // Unneeded content.
+  .permalink, .comment-form__title, .form-item-name label, .field--name-field-comment .form-required {
+    display: none;
+  }
+
+  .comment__submitted {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .links.inline {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    margin: 0;
+  }
+}
+
+.path-comment, .block-field-blocknodemediafield-comments {
+  .form-item-name input, #edit-field-comment-wrapper textarea {
+    padding: 0 5px;
+  }
+
+  #edit-field-comment-wrapper textarea {
+    border: 1px solid #ddd;
+  }
+
+  .comment-form__title, .form-item-name label, .field--name-field-comment .form-required {
+    display: none;
+  }
+
+  .comment-form {
+    .form-actions {
+      input {
+        margin: 10px 10px 0 0;
+        -webkit-appearance: none;
+        cursor: pointer;
+        color: black;
+        text-decoration: none;
+        border: 2px solid black;
+        padding: 4px 30px;
+        background-color: #f9f9f9;
+        &:hover {
+          color: white;
+          background-color: black;
+        }
+      }
+    }
+  }
+
+  .js-ajax-comments-messages {
+    margin: 10px 0;
+  }
+
+
+}

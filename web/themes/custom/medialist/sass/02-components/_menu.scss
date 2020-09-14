@@ -1,0 +1,40 @@
+.responsive-menu-toggle-icon span.label {
+  color: $pink;
+  display: none;
+}
+
+.responsive-menu-toggle-icon:before,
+.responsive-menu-toggle-icon:after,
+.responsive-menu-toggle-icon span.icon {
+  background: $pink;
+}
+
+.responsive-menu-block-wrapper {
+  #horizontal-menu {
+    li {
+      padding: 0;
+
+      a {
+        display: block;
+        padding: 8px 16px;
+        color: #fff;
+        font-size: 0.9rem;
+        background-color: #000;
+      }
+    }
+
+    .menu.sub-nav {
+      background-color: #464646;
+      min-width: 9em;
+      width: auto;
+      margin-left: 0;
+
+      a {
+        padding: 5px 20px;
+        font-size: .80em;
+        border-bottom: 1px solid #003333;
+        background-color: #464646;
+      }
+    }
+  }
+}

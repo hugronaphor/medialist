@@ -1,0 +1,34 @@
+uuid: 1f240090-dacc-4078-b188-90d67bb0b741
+langcode: en
+status: true
+dependencies: {  }
+id: up_down
+label: Up/Down
+template: numberupdown
+entity_types:
+  - node.media
+comment_types: {  }
+options:
+  -
+    value: '1'
+    label: Up
+    class: ''
+  -
+    value: '-1'
+    label: Down
+    class: ''
+voting:
+  use_deadline: 0
+  anonymous_window: -2
+  user_window: -2
+display:
+  display_label: ''
+  label_class: ''
+  label_position: above
+  description: ''
+  description_class: ''
+  description_position: below
+  readonly: 0
+results:
+  result_position: right
+  result_type: user_vote_empty

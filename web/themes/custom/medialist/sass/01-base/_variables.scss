@@ -1,0 +1,93 @@
+$font-primary: 'BaxterSansRegular', Helvetica, Arial, sans-serif;
+$font-italic: 'BaxterSansRegularItalic', Helvetica, Arial, sans-serif;
+$font-medium: 'BaxterSansMedium', Helvetica, Arial, sans-serif;
+$font-medium-italic: 'BaxterSansMediumItalic', Helvetica, Arial, sans-serif;
+$font-semibold: 'BaxterSansSemibold', Helvetica, Arial, sans-serif;
+$font-semibold-italic: 'BaxterSansSemiboldItalic', Helvetica, Arial, sans-serif;
+$font-bold: 'BaxterSansBold', Helvetica, Arial, sans-serif;
+$font-bold-italic: 'BaxterSansBoldItalic', Helvetica, Arial, sans-serif;
+
+$imgSrc: '../assets/';
+
+$font-size-base: 16;
+$line-height-base: 30;
+
+$light: 300;
+$reg: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+$min-width: 20em;
+$mobile: 20em; // 320px
+$max-tablet: 47.99em;
+$tablet: 48em; // 768px
+$max-laptop: 63.99em;
+$laptop: 64em; // 1024px
+$max-desktop: 89.99em;
+$desktop: 90em; // 1440px
+$desktop-large: 120em; //1920px
+$desktop-xlarge: 150em; //2600px
+
+
+$pink: #af0797;
+$pink-dark: #700e57;
+
+// -----
+$grey: #3b3b3b;
+$blue: #4365e2;
+$ui-navy: #131d42;
+$link-hover: #131d42;
+$link-visited: #9543e2;
+$light-green: #c4ebd0;
+$green: #01d17c;
+$ui-green: #029e5e;
+$light-blue: #d1e2f2;
+$red: #f36365;
+$light-red: #f4cec3;
+$light-yellow: #ffecd2;
+$orange: #e26143;
+$button-hover: #c05239;
+$background-grey: #e2e2e2;
+$ui-silver: #f1f1f1;
+$dark-link-hover: #b3b3b3;
+$dark-link-visited: #bba0e1;
+$ui-yellow: #ffb506;
+$ui-red: #e62c20;
+
+$white: #fff;
+$black: #000;
+$color-text: $grey;
+$focus: #d1e2f2;
+
+$transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+$spacing-x1: rem(4);
+$spacing-x2: rem(8);
+$spacing-x3: rem(12);
+$spacing-x4: rem(16);
+$spacing-x4-5: rem(18);
+$spacing-x5: rem(20);
+$spacing-x6: rem(24);
+$spacing-x7: rem(28);
+$spacing-x8: rem(32);
+$spacing-x9: rem(36);
+$spacing-x10: rem(40);
+$spacing-x11: rem(44);
+$spacing-x12: rem(48);
+$spacing-x13: rem(52);
+$spacing-x14: rem(56);
+$spacing-x15: rem(60);
+$spacing-x16: rem(64);
+$spacing-x17: rem(68);
+$spacing-x18: rem(72);
+$spacing-x19: rem(76);
+$spacing-x20: rem(80);
+$spacing-x21: rem(84);
+$spacing-x22: rem(88);
+$spacing-x23: rem(92);
+$spacing-x24: rem(96);
+$spacing-x25: rem(100);
+$spacing-x26: rem(104);
+$spacing-x27: rem(108);
+$spacing-x30: rem(120);

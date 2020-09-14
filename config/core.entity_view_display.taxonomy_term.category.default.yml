@@ -1,0 +1,64 @@
+uuid: bbd75157-37cd-4496-ad71-fc6b105cf215
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category
+    - views.view.media_list
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          a3efd85e-ff74-48db-bf42-3e0c6e60eb6d:
+            uuid: a3efd85e-ff74-48db-bf42-3e0c6e60eb6d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:taxonomy_term:category:description'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          1b9898db-eb33-4f3f-bf7b-7a9a8676d3cf:
+            uuid: 1b9898db-eb33-4f3f-bf7b-7a9a8676d3cf
+            region: content
+            configuration:
+              id: 'views_block:media_list-media_list_cat'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+id: taxonomy_term.category.default
+targetEntityType: taxonomy_term
+bundle: category
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

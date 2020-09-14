@@ -1,0 +1,39 @@
+uuid: bf9665bd-30aa-400e-bde9-81fe9dd01c42
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_text_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Drupal teaser length configuration'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - teaser_length
+  source_module: text
+process:
+  default_summary_length:
+    -
+      plugin: get
+      source: teaser_length
+destination:
+  plugin: config
+  config_name: text.settings
+migration_dependencies:
+  required: {  }
+  optional: {  }

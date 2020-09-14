@@ -1,0 +1,39 @@
+uuid: 29c7514d-3e64-49b1-86ec-a292935905b7
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_menu_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Menu UI configuration'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - menu_override_parent_selector
+  source_module: menu
+process:
+  override_parent_selector:
+    -
+      plugin: get
+      source: menu_override_parent_selector
+destination:
+  plugin: config
+  config_name: menu_ui.settings
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,0 +1,43 @@
+uuid: ff0a1a03-5e74-49ed-9693-13c47777c9f6
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_d7_system_cron
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Drupal 7 cron settings'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - cron_threshold_warning
+    - cron_threshold_error
+  source_module: system
+process:
+  threshold/requirements_warning:
+    -
+      plugin: get
+      source: cron_threshold_warning
+  threshold/requirements_error:
+    -
+      plugin: get
+      source: cron_threshold_error
+destination:
+  plugin: config
+  config_name: system.cron
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,0 +1,10 @@
+uuid: ad4cb935-a2cf-49bd-a30d-d837e5c47082
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.side_list
+label: 'Side list'
+targetEntityType: node
+cache: true

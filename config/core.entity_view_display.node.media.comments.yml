@@ -1,0 +1,40 @@
+uuid: d4b49638-e17e-4515-87b4-52f7b8314d0d
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_display.comment.media.default
+    - core.entity_view_mode.node.comments
+    - field.field.node.media.field_category
+    - field.field.node.media.field_comments
+    - field.field.node.media.field_description
+    - field.field.node.media.field_media
+    - node.type.media
+  module:
+    - comment
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.media.comments
+targetEntityType: node
+bundle: media
+mode: comments
+content:
+  field_comments:
+    type: comment_default
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  field_description: true
+  field_media: true
+  links: true
+  rate-up_down: true

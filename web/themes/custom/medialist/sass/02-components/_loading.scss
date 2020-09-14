@@ -1,0 +1,46 @@
+@keyframes pulse {
+  0% {
+    background: rgba($blue, 0);
+  }
+
+  50% {
+    background: rgba($blue, 1);
+  }
+
+  100% {
+    background: rgba($blue, 0);
+  }
+}
+
+.ajax-progress.ajax-progress-fullscreen,
+.ajax-progress.ajax-progress-fullscreen:before,
+.ajax-progress.ajax-progress-fullscreen:after {
+  animation: pulse 900ms infinite;
+  background: $blue;
+  border-radius: 100%;
+  display: block;
+  height: rem(10);
+  left: 50%;
+  margin-top: rem(-5);
+  opacity: 1;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  width: rem(10);
+}
+
+.ajax-progress.ajax-progress-fullscreen {
+  animation-delay: 300ms;
+  margin-left: rem(-5);
+}
+
+.ajax-progress.ajax-progress-fullscreen:before {
+  content: '';
+  margin-left: rem(-20);
+}
+
+.ajax-progress.ajax-progress-fullscreen:after {
+  animation-delay: 600ms;
+  content: '';
+  margin-left: rem(10);
+}

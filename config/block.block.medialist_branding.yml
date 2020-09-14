@@ -1,0 +1,25 @@
+uuid: b7f87095-1a50-420f-a45b-19d1c7869974
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - medialist
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: medialist_branding
+theme: medialist
+region: header
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

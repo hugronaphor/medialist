@@ -1,0 +1,8 @@
+uuid: c79acb52-c5f3-47ff-b7d4-aaf78743d107
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: Media
+target_entity_type_id: node
+description: ''

@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains procedural code.
+ */
+
+/**
+ * Implements hook_theme().
+ *
+ * {@inheritdoc}
+ */
+function ml_core_theme($existing, $type, $theme, $path) {
+  $return = [];
+
+  $return['header_top'] = [
+    'template' => 'header-top-block',
+    'variables' => ['fb_url' => '', 'add_media_link' => '', 'sitename' => '', 'user_items' => []],
+  ];
+
+  return $return;
+}

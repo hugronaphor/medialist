@@ -1,0 +1,20 @@
+uuid: a3636cc1-c233-4276-99fc-309e64eea0d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - ml_core
+  theme:
+    - medialist
+id: footerbottom
+theme: medialist
+region: footer
+weight: 0
+provider: null
+plugin: footer_bottom
+settings:
+  id: footer_bottom
+  label: 'Footer Bottom'
+  provider: ml_core
+  label_display: '0'
+visibility: {  }

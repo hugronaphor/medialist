@@ -1,0 +1,17 @@
+uuid: 814799c5-54da-435e-bc00-1ae411f0f785
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: side_list_wide
+label: 'Side list wide'
+effects:
+  093f47c1-2e1a-4725-803f-8383f04e0757:
+    uuid: 093f47c1-2e1a-4725-803f-8383f04e0757
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 130
+      crop_type: focal_point

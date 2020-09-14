@@ -1,0 +1,17 @@
+uuid = 98a43ac1-f6cd-11ea-9a98-0242ac130003
+name = 
+tool_name = mariabackup
+tool_command = --backup --target-dir=/mnt/ddev_config/db_snapshots/medialist_20200914220223 --user=root --password=... --socket=/var/tmp/mysql.sock
+tool_version = 10.3.23-MariaDB
+ibbackup_version = 10.3.23-MariaDB
+server_version = 10.3.23-MariaDB-1:10.3.23+maria~focal-log
+start_time = 2020-09-14 21:02:24
+end_time = 2020-09-14 21:02:27
+lock_time = 0
+binlog_pos = filename 'mysql-bin.000003', position '248878', GTID of the last change '0-1-25736'
+innodb_from_lsn = 0
+innodb_to_lsn = 1487689640
+partial = N
+incremental = N
+format = file
+compressed = N

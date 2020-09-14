@@ -1,0 +1,62 @@
+uuid: 48162bfe-5ea6-448c-b2b5-ba89bb0b8f64
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_d7_pathauto_patterns
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Pathauto patterns'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: pathauto_pattern
+  constants:
+    status: true
+    selection_logic: and
+process:
+  status:
+    -
+      plugin: get
+      source: constants/status
+  id:
+    -
+      plugin: get
+      source: id
+  label:
+    -
+      plugin: get
+      source: label
+  type:
+    -
+      plugin: get
+      source: type
+  pattern:
+    -
+      plugin: get
+      source: pattern
+  selection_criteria:
+    -
+      plugin: get
+      source: selection_criteria
+  selection_logic:
+    -
+      plugin: get
+      source: constants/selection_logic
+destination:
+  plugin: 'entity:pathauto_pattern'
+migration_dependencies:
+  optional:
+    - upgrade_upgrade_d7_node_type
+  required: {  }

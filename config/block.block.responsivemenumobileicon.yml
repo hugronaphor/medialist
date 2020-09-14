@@ -1,0 +1,20 @@
+uuid: 9bcf5d37-7145-44f8-996b-f0d8b7e35337
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - medialist
+id: responsivemenumobileicon
+theme: medialist
+region: header
+weight: -2
+provider: null
+plugin: responsive_menu_toggle
+settings:
+  id: responsive_menu_toggle
+  label: 'Responsive menu mobile icon'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }

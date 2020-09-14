@@ -1,0 +1,22 @@
+uuid: 9ee0e0e8-84f2-4069-96c5-3497e2d3b895
+langcode: en
+status: true
+dependencies:
+  theme:
+    - medialist
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: medialist_local_tasks
+theme: medialist
+region: content
+weight: 1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

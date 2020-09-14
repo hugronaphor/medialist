@@ -1,0 +1,54 @@
+uuid: 25d2eabf-bbb9-4bd8-a94a-0632fde922ee
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_d7_view_modes
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'View modes'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: d7_view_mode
+process:
+  mode:
+    -
+      plugin: static_map
+      source: view_mode
+      bypass: true
+      map:
+        default: full
+  label:
+    -
+      plugin: static_map
+      source: view_mode
+      bypass: true
+      map:
+        search_index: 'Search index'
+        search_result: 'Search result'
+        rss: RSS
+        print: Print
+        teaser: Teaser
+        full: Full
+        default: Full
+  targetEntityType:
+    -
+      plugin: get
+      source: entity_type
+destination:
+  plugin: 'entity:entity_view_mode'
+migration_dependencies:
+  required: {  }
+  optional: {  }

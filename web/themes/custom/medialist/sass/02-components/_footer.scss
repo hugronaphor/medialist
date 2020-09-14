@@ -1,0 +1,21 @@
+
+.layout-container > footer {
+  background: #000;
+  padding: 10px 0;
+
+  .region-footer {
+    max-width: 1600px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    #block-footerbottom {
+      margin: 2px;
+      padding: 0;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+uuid: 96fb1430-e35a-4097-ab53-c04130a2e1f4
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_block_content_type
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Block content type'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: embedded_data
+  data_rows:
+    -
+      id: basic
+      label: Basic
+  ids:
+    id:
+      type: string
+  source_module: block
+process:
+  id:
+    -
+      plugin: get
+      source: id
+  label:
+    -
+      plugin: get
+      source: label
+destination:
+  plugin: 'entity:block_content_type'
+migration_dependencies:
+  required: {  }
+  optional: {  }

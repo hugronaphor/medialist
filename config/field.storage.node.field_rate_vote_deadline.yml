@@ -1,0 +1,22 @@
+uuid: 4d0b9958-ab6b-478a-bece-a561592b267e
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: 8VlcLvuXF7V9Zpsd_k6p_3Y-4HWgfv1tE0cfFZehJwA
+id: node.field_rate_vote_deadline
+field_name: field_rate_vote_deadline
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

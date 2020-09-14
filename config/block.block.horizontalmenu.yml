@@ -1,0 +1,20 @@
+uuid: b2dc53c3-d558-40d3-96c9-2d51774cbda3
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - medialist
+id: horizontalmenu
+theme: medialist
+region: header
+weight: -3
+provider: null
+plugin: responsive_menu_horizontal_menu
+settings:
+  id: responsive_menu_horizontal_menu
+  label: 'Horizontal menu'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }

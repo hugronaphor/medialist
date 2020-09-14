@@ -1,0 +1,20 @@
+uuid: 89398154-c5e6-4567-bd7f-83e8a2b429ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - ml_core
+  theme:
+    - medialist
+id: headertop
+theme: medialist
+region: header_top
+weight: 0
+provider: null
+plugin: header_top
+settings:
+  id: header_top
+  label: 'Header Top'
+  provider: ml_core
+  label_display: '0'
+visibility: {  }

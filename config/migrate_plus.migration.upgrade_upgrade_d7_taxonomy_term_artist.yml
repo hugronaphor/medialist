@@ -1,0 +1,91 @@
+uuid: b2d97998-d20e-49c5-8744-d44f5cff479a
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_d7_taxonomy_term_artist
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Artist)'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: d7_taxonomy_term
+  bundle: artist
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_upgrade_d7_taxonomy_term_category
+        - upgrade_upgrade_d7_taxonomy_term_artist
+        - upgrade_upgrade_d7_taxonomy_term_tags
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: artist
+migration_dependencies:
+  required:
+    - upgrade_upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_upgrade_d7_field_instance
+    - upgrade_upgrade_d7_taxonomy_vocabulary
+    - upgrade_upgrade_d7_taxonomy_term_tags
+    - upgrade_upgrade_d7_taxonomy_term_artist
+    - upgrade_upgrade_d7_taxonomy_term_category

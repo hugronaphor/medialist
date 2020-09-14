@@ -1,0 +1,20 @@
+uuid: eb328c07-f2c4-4f76-8967-a866b0eed876
+langcode: en
+status: false
+dependencies:
+  theme:
+    - medialist
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: medialist_local_actions
+theme: medialist
+region: content
+weight: -1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,41 @@
+uuid: 156cea14-18d2-4cce-b68a-85ac4277f3d6
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_d7_system_mail
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Drupal 7 system mail configuration'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - mail_system
+  source_module: system
+process:
+  interface/default:
+    -
+      plugin: static_map
+      source: mail_system/default-system
+      map:
+        DefaultMailSystem: php_mail
+        MailTestCase: test_mail_collector
+destination:
+  plugin: config
+  config_name: system.mail
+migration_dependencies:
+  required: {  }
+  optional: {  }

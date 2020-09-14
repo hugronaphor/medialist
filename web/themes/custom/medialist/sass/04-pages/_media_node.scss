@@ -1,0 +1,30 @@
+.node--type-media.node--view-mode-full {
+  padding-left: 30px;
+
+  .block-field-blocknodemediafield-media {
+    margin-top: 10px;
+
+    article.media {
+      text-align: left;
+      display: block;
+
+      img, picture, video {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .field--name-field-description {
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    margin: 15px 0;
+    padding: 10px;
+  }
+
+  .block-field-blocknodemediafield-comments {
+    background: #fff;
+    margin: 15px 0;
+  }
+
+}

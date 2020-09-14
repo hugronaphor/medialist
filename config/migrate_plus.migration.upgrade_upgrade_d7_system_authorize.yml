@@ -1,0 +1,38 @@
+uuid: 932c9f63-5473-4454-a462-58f524b1159f
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_d7_system_authorize
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Drupal 7 file transfer authorize configuration'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - authorize_filetransfer_default
+  source_module: system
+process:
+  filetransfer_default:
+    -
+      plugin: get
+      source: authorize_filetransfer_default
+destination:
+  plugin: config
+  config_name: system.authorize
+migration_dependencies:
+  required: {  }
+  optional: {  }

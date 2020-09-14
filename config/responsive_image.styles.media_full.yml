@@ -1,0 +1,17 @@
+uuid: 045cd613-3e92-496c-b491-4a6f2e1110ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.media_main
+id: media_full
+label: 'Media Full'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: media_main
+breakpoint_group: responsive_image
+fallback_image_style: large

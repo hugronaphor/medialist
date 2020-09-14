@@ -1,0 +1,30 @@
+medialist.xs:
+  label: xs
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+medialist.sd:
+  label: sd
+  mediaQuery: '(min-width: 576px)'
+  weight: 1
+  multipliers:
+    - 1x
+medialist.md:
+  label: md
+  mediaQuery: '(min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+medialist.lg:
+  label: lg
+  mediaQuery: '(min-width: 992px)'
+  weight: 3
+  multipliers:
+    - 1x
+medialist.xl:
+  label: xl
+  mediaQuery: '(min-width: 1200px)'
+  weight: 4
+  multipliers:
+    - 1x

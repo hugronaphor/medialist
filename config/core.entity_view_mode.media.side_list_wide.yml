@@ -1,0 +1,10 @@
+uuid: 5c4e5770-bfcd-49f2-96e1-fdc305c18e2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.side_list_wide
+label: 'Side wide'
+targetEntityType: media
+cache: true

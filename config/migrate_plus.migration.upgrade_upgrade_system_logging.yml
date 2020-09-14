@@ -1,0 +1,45 @@
+uuid: d3f4504d-add3-42ce-b794-e3fc786cead3
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_system_logging
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'System logging'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-medialist-7-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - error_level
+  source_module: system
+process:
+  error_level:
+    -
+      plugin: static_map
+      source: error_level
+      default_value: all
+      map:
+        - hide
+        - some
+        - all
+        - verbose
+destination:
+  plugin: config
+  config_name: system.logging
+migration_dependencies:
+  required: {  }
+  optional: {  }

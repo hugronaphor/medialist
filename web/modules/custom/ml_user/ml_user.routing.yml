@@ -1,0 +1,8 @@
+ml_user.account_required:
+  path: '/user/account-required/{context}'
+  defaults:
+    _controller: '\Drupal\ml_user\Controller\MlUserController::promptUser'
+    context: 'generic'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'FALSE'
